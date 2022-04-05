@@ -6,38 +6,45 @@ import { api } from '../../services/api';
 import { formatPrice } from '../../util/format';
 import { useCart } from '../../hooks/useCart';
 
-interface Product {
+interface Product
+{
   id: number;
   title: string;
   price: number;
   image: string;
 }
 
-interface ProductFormatted extends Product {
+interface ProductFormatted extends Product
+{
   priceFormatted: string;
 }
 
-interface CartItemsAmount {
+interface CartItemsAmount
+{
   [key: number]: number;
 }
 
-const Home = (): JSX.Element => {
+const Home = (): JSX.Element =>
+{
   // const [products, setProducts] = useState<ProductFormatted[]>([]);
   // const { addProduct, cart } = useCart();
 
-  // const cartItemsAmount = cart.reduce((sumAmount, product) => {
-  //   // TODO
-  // }, {} as CartItemsAmount)
+  //const cartItemsAmount = cart.reduce((sumAmount, product) => {
+  // TODO
+  //}, {} as CartItemsAmount)
 
-  useEffect(() => {
-    async function loadProducts() {
+  useEffect(() =>
+  {
+    async function loadProducts()
+    {
       // TODO
     }
 
     loadProducts();
   }, []);
 
-  function handleAddProduct(id: number) {
+  function handleAddProduct(id: number)
+  {
     // TODO
   }
 
@@ -53,8 +60,8 @@ const Home = (): JSX.Element => {
         // onClick={() => handleAddProduct(product.id)}
         >
           <div data-testid="cart-product-quantity">
-            <MdAddShoppingCart size={16} color="#FFF" />
-            {/* {cartItemsAmount[product.id] || 0} */} 2
+            <MdAddShoppingCart size={ 16 } color="#FFF" />
+            {/* {cartItemsAmount[product.id] || 0} */ } 2
           </div>
 
           <span>ADICIONAR AO CARRINHO</span>
